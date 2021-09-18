@@ -45,8 +45,9 @@ This is a test made by FrontEdge IT to be used in the recruitment process to the
 
 ## When are you finished?
   - Routing between the screens are implemented in the header.
-  - You have loaded data, handled loading and error states and displayed the data in the cards.
+  - You have loaded data, handled loading and error states and displayed the data in the cards on each screen.
   - You have implemented delete functionality on the card for each entity to be able to delete it. 
+  - You feel that your code is as structured, clean, reusable and generic as you can achieve. 
 
 ## Scripts to be used
 
