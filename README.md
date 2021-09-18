@@ -12,7 +12,7 @@ Make sure to read the instructions carefully before starting.
 ## Get started
   - Make sure to setup a .env file with the information from .example.env.
   - Run `yarn install` to install all node_modules. 
-  - **Do not used npm, used yarn when installing possible external package and when running install, we don't want to mix yarn.lock and package-lock.json**
+  - **Do not use npm, use yarn when installing possible external package and when running install, we don't want to mix yarn.lock and package-lock.json**
   - Run `yarn start` to run the application.
   - Run `yarn start-db` to start the json server.
   - Run `yarn db-refresh` to refresh db.json.
