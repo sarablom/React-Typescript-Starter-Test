@@ -39,9 +39,9 @@ This is a test made by FrontEdge IT to be used in the recruitment process to the
   - How you setup your routing structure to be as scalable as possible.
 
 ## Packages
-  - react-router-dom: Used to setup routing.
-  - json-server: Used for the json-server.
-  - react-spinners: Used incase you want to display some good looking spinners when loading data using the asyncDelay. 
+  - react-router-dom: Used to setup routing. [Read more](https://reactrouter.com/web/guides/quick-start)
+  - json-server: Used for the json-server. [Read more](https://www.npmjs.com/package/json-server)
+  - react-spinners: Used incase you want to display some good looking spinners when loading data using the asyncDelay. [Read more](https://www.npmjs.com/package/react-spinners)
 
 ## When are you finished?
   - Routing between the screens are implemented in the header.
