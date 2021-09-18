@@ -2,6 +2,8 @@
 
 This is a test made by FrontEdge IT to be used in the recruitment process to the company. The aim is to determine the skills within React, Typescript and api management.
 
+Make sure to read the instructions carefully before starting.
+
 ## Short description
   - In this test you are supposed to create two screens (dishes and sports) which you can navigate between using react-router-dom.
   - On each screen you are supposed to display either the dishes or sports in cards, which means that you have to load the data from db.json.
