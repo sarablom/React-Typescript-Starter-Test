@@ -9,6 +9,8 @@ This is a test made by FrontEdge IT to be used in the recruitment process to the
 
 ## Get started
   - Make sure to setup a .env file with the information from .example.env.
+  - Run `yarn install` to install all node_modules. 
+  - **Do not used npm, we don't want to mix yarn.lock and package-lock.json**
   - Run `yarn start` to run the application.
   - Run `yarn start-db` to start the json server.
   - Run `yarn db-refresh` to refresh db.json.
@@ -45,7 +47,7 @@ This is a test made by FrontEdge IT to be used in the recruitment process to the
   - Routing between the screens are implemented in the header.
   - You have loaded data, handled loading and error states and displayed the data in the cards.
   - You have implemented delete functionality on the card for each entity to be able to delete it. 
-  
+
 ## Scripts to be used
 
 In the project directory, you can run the following after you have setup a .env file with same structure as the .example.env file:
