@@ -6,9 +6,9 @@ This is a test made by FrontEdge IT to be used in the recruitment process to the
 Make sure to read the instructions carefully before starting.
 
 ## The Scenario
-Our client "Pablos Sportsbar" has only one TV and their customers are constantly arguing over what sport to watch on it. Therefore they have asked you to develop an application that lets the customer delete the sports that he/she dont want to watch, so that Pablo knows which sport most people likes to watch. And while we're at it, the Sports Bar customers should also be able to delete the food that they prefer not to see on our menu.
+Our client "Pablos Sportsbar" has only one TV and their customers are constantly arguing over what sport to watch on it. Therefore Pablo has asked you to develop an application that lets the customer delete the sports that he/she don't want to watch, so that Pablo knows which sport most people likes to watch. And while we're at it, the Sports Bar customers should also be able to delete the food that they prefer not to see on our menu.
 
-Our Client just want a POC (Proof of concept) so your job is to create a suggestion for the client on how this page make work from an end-user view.
+Our Client just want a POC (Proof of concept) so your job is to create a suggestion for the client on how this page might look and work from an end-user view.
 
 ![food](./public/assets/food_for_readme.jpg)
 
