@@ -43,6 +43,8 @@ This is a test made by FrontEdge IT to be used in the recruitment process to the
   - **json-server**: Used for the json-server. [Read more](https://www.npmjs.com/package/json-server)
   - **react-spinners**: Used incase you want to display some good looking spinners when loading data using the asyncDelay. [Read more](https://www.npmjs.com/package/react-spinners)
 
+## External packages
+  - You are allowed to bring in external packages if needed. The task can be solved perfectly fine without any additional packages though. 
 ## When are you finished?
   - Routing between the screens are implemented in the header.
   - You have loaded data, handled loading and error states and displayed the data in the cards on each screen.
