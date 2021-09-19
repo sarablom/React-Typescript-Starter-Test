@@ -13,12 +13,13 @@ Our Client just want a POC (Proof of concept) so your job is to create a suggest
 ![food](./public/assets/food_for_readme.jpg)
 
 
-## Short description
+## Instructions
   - In this test you are supposed to create two screens (dishes and sports) which you can navigate between using react-router-dom.
   - On each screen you are supposed to display either the dishes or sports in cards, which means that you have to load the data from db.json.
   - On each card you are also supposed to have a delete button to remove the specific card, which should then be removed from db.json.
 
 ## Get started
+  - Fork and clone the repo
   - Make sure to setup a .env file with the information from .example.env.
   - Run `yarn install` to install all node_modules. 
   - **Do not use npm, use yarn when installing possible external package and when running install, we don't want to mix yarn.lock and package-lock.json**
@@ -26,6 +27,11 @@ Our Client just want a POC (Proof of concept) so your job is to create a suggest
   - Run `yarn start-db` to start the json server.
   - Run `yarn db-refresh` to refresh db.json.
   - Read about json-server here: [json-server](https://www.npmjs.com/package/json-server)
+
+## When done
+  - Create a Pull Request with your solution from your forked Repo into the original repo
+  - We will then review your pull request
+  - If there are any questions, feel free to contact fredrik.lunde@frontedgeit.se
 
 ## Advice
   - Don't touch the backupdb.json, it is only supposed to be used with the refresh command seen down below once you start deleting sports/dishes.
