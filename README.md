@@ -12,7 +12,6 @@ Our Client just want a POC (Proof of concept) so your job is to create a suggest
 
 ![food](./public/assets/food_for_readme.jpg)
 
-
 ## Instructions
   - In this test you are supposed to create two screens (dishes and sports) which you can navigate between using react-router-dom.
   - On each screen you are supposed to display either the dishes or sports in cards, which means that you have to load the data from db.json.
@@ -29,7 +28,7 @@ Our Client just want a POC (Proof of concept) so your job is to create a suggest
   - Read about json-server here: [json-server](https://www.npmjs.com/package/json-server)
 
 ## When done
-  - Create a Pull Request with your solution from your forked Repo into the original repo
+  - Either give a link to your forked repo or send a zip file to: fredrik.lunde@frontedgeit.se
   - We will then review your pull request
   - If there are any questions, feel free to contact fredrik.lunde@frontedgeit.se
 
