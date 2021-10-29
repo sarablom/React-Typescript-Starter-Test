@@ -2,6 +2,7 @@ import React, { useEffect, useContext, useState } from "react";
 import { Context } from "../context/Context";
 import { getItems, deleteItem } from "../services/databaseFetches";
 import { asyncDelay } from "../utils/async-delay";
+import ClipLoader from "react-spinners/ClipLoader";
 import styles from "./ListRender.module.css";
 
 function ListRender(props) {
@@ -30,10 +31,12 @@ function ListRender(props) {
 
   return (
     <div>
-      {isLoading && <h2>Loading ...</h2>}
+      {isLoading && (
+          <ClipLoader className={styles.loader} />
+      )}
       {!isLoading && (
         <ul className={styles.list}>
-          {items && 
+          {items &&
             items.map((item) => (
               <li key={item.id} className={styles.listItem}>
                 <h2 className={styles.listTitle}>{item.title}</h2>
@@ -51,8 +54,7 @@ function ListRender(props) {
                 </button>
               </li>
             ))}
-          {items.length === 0 && <p>You have no favourites :(</p>
-    }
+          {items.length === 0 && <p>You have no favourites :(</p>}
         </ul>
       )}
     </div>
