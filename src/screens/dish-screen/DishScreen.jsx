@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useContext } from "react";
+import { Context } from "../../context/Context";
 import styles from "./DishScreen.module.css";
 import { getDishes, deleteDish } from "../../utils/databaseFetches";
 
 function DishScreen() {
-  const [dishes, setDishes] = useState([]);
+  const [context, updateContext] = useContext(Context);
+  const dishes = context.dishes;
 
   useEffect(() => {
     fetchDishes();
@@ -11,11 +13,13 @@ function DishScreen() {
 
   async function fetchDishes() {
     const data = await getDishes();
-    setDishes(data)
+    updateContext({
+      dishes: data,
+    })
   }
 
-  async function removeDishHandler(dishId) {
-    await deleteDish(dishId);
+  async function removeDishHandler(dish) {
+    await deleteDish(dish.id);
   }
 
   return (
@@ -34,14 +38,13 @@ function DishScreen() {
               />
               <button
                 className={styles.btn}
-                onClick={() => removeDishHandler(dish.id)}
+                onClick={() => removeDishHandler(dish)}
               >
                 Delete from favourite
               </button>
             </li>
           ))}
-          {dishes.length === 0 && <p>You have no favourite dishes :(</p>
-          }
+        {dishes.length === 0 && <p>You have no favourite dishes :(</p>}
       </ul>
     </main>
   );

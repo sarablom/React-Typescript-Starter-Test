@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useContext } from "react";
+import { Context } from "../../context/Context";
 import styles from "./SportsScreen.module.css";
 import { getSports, deleteSport } from "../../utils/databaseFetches";
 
 function SportsScreen() {
-  const [sports, setSports] = useState([]);
+  const [context, updateContext] = useContext(Context);
+  const sports = context.sports;
 
   useEffect(() => {
     fetchSports();
@@ -11,11 +13,13 @@ function SportsScreen() {
 
   async function fetchSports() {
     let data = await getSports();
-    setSports(data);
+    updateContext({
+      sports: data,
+    })
   }
 
   async function removeSportHandler(sportId) {
-    const data = await deleteSport(sportId);
+    await deleteSport(sportId);
   }
 
   return (
