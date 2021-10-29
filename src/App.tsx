@@ -14,8 +14,8 @@ function App() {
       <Router>
         <Header />
         <Route path="/" exact component={HomeScreen} />
-        <Route path="/dishes" exact component={DishScreen} />
-        <Route path="/sports" exact component={SportsScreen} />
+        <Route path="/dishscreen" exact component={DishScreen} />
+        <Route path="/sportscreen" exact component={SportsScreen} />
         <Footer />
       </Router>
     </div>

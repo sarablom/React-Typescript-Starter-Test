@@ -8,10 +8,10 @@ export const Header = () => {
       <Link to="/" className="navigation__link">
         <li className={styles.linkStyle}>Home</li>
       </Link>
-      <Link to="/sports" className={styles.linkStyle}>
+      <Link to="/sportscreen" className={styles.linkStyle}>
         <li className="navigation__link__item">Sports</li>
       </Link>
-      <Link to="/dishes" className={styles.linkStyle}>
+      <Link to="/dishscreen" className={styles.linkStyle}>
         <li className="navigation__link__item">Dishes</li>
       </Link>
     </ul>

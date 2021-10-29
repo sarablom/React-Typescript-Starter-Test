@@ -9,4 +9,19 @@
     color: #E7B917;
     font-size: 5rem;
     letter-spacing: .5rem;
+    margin: 1rem;
+}
+
+.homeImg {
+    margin: 2rem;
+    border-radius: 1rem;
+    width: 80%;
+    max-width: 50rem;
+}
+
+@media screen and (max-width: 768px) {
+    .homeContainer > h1 {
+        font-size: 4rem;
+        letter-spacing: 0;
+    }
 }
