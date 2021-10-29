@@ -1,10 +1,12 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { Context } from "../../context/Context";
 import styles from "./SportsScreen.module.css";
-import { getSports, deleteSport } from "../../utils/databaseFetches";
+import { getSports, deleteSport } from "../../services/databaseFetches";
+import { asyncDelay } from "../../utils/async-delay";
 
 function SportsScreen() {
   const [context, updateContext] = useContext(Context);
+  const [isLoading, setIsLoading] = useState(true);
   const sports = context.sports;
 
   useEffect(() => {
@@ -12,7 +14,9 @@ function SportsScreen() {
   }, [sports]);
 
   async function fetchSports() {
+    await asyncDelay(2000);
     let data = await getSports();
+    setIsLoading(false);
     updateContext({
       sports: data,
     })
@@ -25,7 +29,8 @@ function SportsScreen() {
   return (
     <main className={styles.sportsContainer}>
       <h1>Your favourite sports</h1>
-      <ul className={styles.sportsList}>
+      {isLoading && <h2>Loading ...</h2>}
+      {!isLoading && <ul className={styles.sportsList}>
         {sports &&
           sports.map((sport) => (
             <li key={sport.id} className={styles.sportListItem}>
@@ -45,7 +50,7 @@ function SportsScreen() {
             </li>
           ))}
         {sports.length === 0 && <p>You have no favourite sports :(</p>}
-      </ul>
+      </ul>}
     </main>
   );
 }

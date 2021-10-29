@@ -1,10 +1,12 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { Context } from "../../context/Context";
 import styles from "./DishScreen.module.css";
-import { getDishes, deleteDish } from "../../utils/databaseFetches";
+import { getDishes, deleteDish } from "../../services/databaseFetches";
+import { asyncDelay } from "../../utils/async-delay";
 
 function DishScreen() {
   const [context, updateContext] = useContext(Context);
+  const [isLoading, setIsLoading] = useState(true);
   const dishes = context.dishes;
 
   useEffect(() => {
@@ -12,7 +14,9 @@ function DishScreen() {
   }, [dishes]);
 
   async function fetchDishes() {
+    await asyncDelay(2000);
     const data = await getDishes();
+    setIsLoading(false);
     updateContext({
       dishes: data,
     })
@@ -25,7 +29,8 @@ function DishScreen() {
   return (
     <main className={styles.dishContainer}>
       <h1>Your favourite dishes</h1>
-      <ul className={styles.dishList}>
+      {isLoading && <h2>Loading ...</h2>}
+      {!isLoading && <ul className={styles.dishList}>
         {dishes &&
           dishes.map((dish) => (
             <li key={dish.id} className={styles.dishListItem}>
@@ -45,7 +50,7 @@ function DishScreen() {
             </li>
           ))}
         {dishes.length === 0 && <p>You have no favourite dishes :(</p>}
-      </ul>
+      </ul>}
     </main>
   );
 }
