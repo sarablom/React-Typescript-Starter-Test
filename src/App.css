@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;700&display=swap');
+
+.App {
+    background-color: rgb(44, 44, 44);
+    font-family: 'Rokkitt', serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}

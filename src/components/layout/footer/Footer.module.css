@@ -1,0 +1,8 @@
+.footerContainer {
+    flex-shrink: 0;
+}
+
+.footer_copyright {
+    text-align: center;
+    padding: 1rem;
+}

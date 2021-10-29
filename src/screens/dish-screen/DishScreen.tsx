@@ -1,11 +1,13 @@
 import React from 'react'
+import styles from "./DishScreen.module.css";
 
-interface Props {}
-
-export const DishScreen: React.FC<Props> = () => {
+function DishScreen() {
   return (
-    <div>
-      <h3>Hello from dishscreen</h3>
+    <div className={styles.dishContainer}>
+      <h1>Your favourite dishes</h1>
     </div>
   )
 }
+
+export default DishScreen
+

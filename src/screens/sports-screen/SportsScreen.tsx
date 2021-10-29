@@ -1,11 +1,12 @@
 import React from 'react'
+import styles from "./SportsScreen.module.css"
 
-interface Props {}
-
-export const SportsScreen: React.FC<Props> = () => {
+function SportsScreen() {
   return (
-    <div>
-      <h3>Hello from sports-screen</h3>
+    <div className={styles.sportsContainer}>
+      <h1>Your favourite sports</h1>
     </div>
   )
 }
+
+export default SportsScreen

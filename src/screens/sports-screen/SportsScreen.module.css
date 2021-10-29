@@ -1,0 +1,12 @@
+.sportsContainer {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.sportsContainer > h1 {
+    color: #E7B917;
+    font-size: 3rem;
+    padding: 2rem 0;
+}
