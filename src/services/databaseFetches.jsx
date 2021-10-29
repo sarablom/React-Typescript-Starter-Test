@@ -1,44 +1,29 @@
-export async function getDishes() {
-  const response = await fetch(`http://localhost:3000/dishes/`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
 
-  const data = await response.json();
-  return data;
-}
 
-export async function getSports() {
-  //const abortController = new AbortController();
-  const response = await fetch(
-    `http://localhost:3000/sports/`,
-    //{ signal: abortController.signal },
-    {
+export async function getItems(type) {
+  try {
+    const response = await fetch(`${process.env.REACT_APP_API_BASEURL}/${type}/`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
       },
-    }
-  );
+    });
 
-  const data = await response.json();
-  return data;
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
 }
 
-export async function deleteDish(id) {
-  const response = await fetch(`http://localhost:3000/dishes/${id}`, {
-    method: "DELETE",
-  });
-  const data = await response.json();
-  return data;
-}
-
-export async function deleteSport(id) {
-  const response = await fetch(`http://localhost:3000/sports/${id}`, {
-    method: "DELETE",
-  });
-  const data = await response.json();
-  return data;
+export async function deleteItem(type, id) {
+  try {
+    const response = await fetch(`${process.env.REACT_APP_API_BASEURL}/${type}/${id}`, {
+      method: "DELETE",
+    });
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
 }

@@ -1,5 +1,24 @@
 {
-  "dishes": [],
+  "dishes": [
+    {
+      "id": 1,
+      "title": "Spaghetti carbonara",
+      "description": "Perfect and delicious spaghetti",
+      "url": "/assets/carbonara.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Hamburger with fries",
+      "description": "Perfect and delicious hamburger with fries",
+      "url": "/assets/hamburger.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Pizza",
+      "description": "Perfect and delicious pizza",
+      "url": "/assets/pizza.jpg"
+    }
+  ],
   "sports": [
     {
       "id": 1,
@@ -12,18 +31,6 @@
       "title": "Football",
       "description": "Football is a fine sport.",
       "url": "/assets/football.jpg"
-    },
-    {
-      "id": 3,
-      "title": "Golf",
-      "description": "Golf is a fine sport.",
-      "url": "/assets/golf.jpg"
-    },
-    {
-      "id": 4,
-      "title": "Athletics",
-      "description": "Athletics is a fine sport.",
-      "url": "/assets/athletics.jpg"
     }
   ]
 }

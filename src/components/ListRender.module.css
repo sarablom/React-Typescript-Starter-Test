@@ -1,0 +1,54 @@
+.sportsContainer, .dishContainer {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.sportsContainer > h1,
+.dishContainer h1 {
+    color: #E7B917;
+    font-size: 3rem;
+    padding: 2rem 0;
+}
+
+ul.list {
+    margin: 1rem 0;
+	background-color: rgba(255, 255, 255, 0.03);
+	border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.listItem {
+    margin: 1rem;
+    padding: 1rem;
+	background-color: rgba(255, 255, 255, 0.03);
+	border-radius: 1rem;
+    list-style-type: none;
+}
+
+.listTitle {
+    color: #E7B917;
+}
+
+.listImg {
+    height: 6rem;
+    padding: .5rem;
+}
+
+.btn {
+    display: block;
+    background-color: #E7B917;
+    border: none;
+    border-radius: .5rem;
+    padding: .3rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    ul.list {
+        grid-template-columns: 1fr;
+    }
+}
