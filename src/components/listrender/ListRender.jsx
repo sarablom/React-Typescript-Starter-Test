@@ -8,7 +8,7 @@ import styles from "./ListRender.module.css";
 function ListRender(props) {
   const [context, updateContext] = useContext(Context);
   const [isLoading, setIsLoading] = useState(true);
-  const items = props.items;
+  const items = context.items;
   const type = props.type;
 
   useEffect(() => {
@@ -19,8 +19,7 @@ function ListRender(props) {
     await asyncDelay(2000);
     const data = await getItems(type);
     updateContext({
-      dishes: data,
-      sports: data,
+      items: data,
     });
     setIsLoading(false);
   }
@@ -31,8 +30,7 @@ function ListRender(props) {
     newArray.splice(index, 1);
 
     updateContext({
-      dishes: newArray,
-      sports: newArray,
+      items: newArray,
     });
   }
 

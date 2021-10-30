@@ -4,8 +4,7 @@ export const Context = createContext();
 
 export const ContextProvider = ({ children }) => {
 	const [context, setContext] = useState({
-		dishes: [],
-        sports: []
+        items: []
 	});
 
 	function updateContext(updates) {

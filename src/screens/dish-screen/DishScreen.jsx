@@ -1,17 +1,14 @@
-import React, { useContext } from "react";
-import { Context } from "../../context/Context";
+import React from "react";
 import ListRender from "../../components/listrender/ListRender";
 import styles from "./DishScreen.module.css";
 
 function DishScreen() {
-  const [context, updateContext] = useContext(Context);
-  const items = context.dishes;
   const type = "dishes";
 
   return (
     <main className={styles.dishContainer}>
       <h1>Your favourite dishes</h1>
-      <ListRender items={items} type={type} />
+      <ListRender type={type} />
     </main>
   );
 }
