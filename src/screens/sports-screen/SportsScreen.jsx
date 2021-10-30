@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../../context/Context";
-import ListRender from "../../components/ListRender";
+import ListRender from "../../components/listrender/ListRender";
 import styles from "./SportsScreen.module.css";
 
 function SportsScreen() {

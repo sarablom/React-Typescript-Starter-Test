@@ -1,8 +1,8 @@
 import React, { useEffect, useContext, useState } from "react";
-import { Context } from "../context/Context";
-import { getItems, deleteItem } from "../services/databaseFetches";
-import { asyncDelay } from "../utils/async-delay";
-import ClipLoader from "react-spinners/ClipLoader";
+import { Context } from "../../context/Context";
+import { getItems, deleteItem } from "../../services/databaseFetches";
+import { asyncDelay } from "../../utils/async-delay";
+import PacmanLoader from "react-spinners/PacmanLoader";
 import styles from "./ListRender.module.css";
 
 function ListRender(props) {
@@ -13,7 +13,7 @@ function ListRender(props) {
 
   useEffect(() => {
     fetchItems();
-  }, [items]);
+  }, []);
 
   async function fetchItems() {
     await asyncDelay(2000);
@@ -25,19 +25,24 @@ function ListRender(props) {
     setIsLoading(false);
   }
 
-  async function removeItemHandler(type, item) {
+  async function removeItemHandler(type, item, index) {
     await deleteItem(type, item.id);
+    const newArray = [...items];
+    newArray.splice(index, 1);
+
+    updateContext({
+      dishes: newArray,
+      sports: newArray,
+    });
   }
 
   return (
     <div>
-      {isLoading && (
-          <ClipLoader className={styles.loader} />
-      )}
+      {isLoading && <PacmanLoader color="#E7B917" />}
       {!isLoading && (
         <ul className={styles.list}>
           {items &&
-            items.map((item) => (
+            items.map((item, index) => (
               <li key={item.id} className={styles.listItem}>
                 <h2 className={styles.listTitle}>{item.title}</h2>
                 <p className={styles.listPara}>{item.description}</p>
@@ -48,7 +53,7 @@ function ListRender(props) {
                 />
                 <button
                   className={styles.btn}
-                  onClick={() => removeItemHandler(type, item)}
+                  onClick={() => removeItemHandler(type, item, index)}
                 >
                   Delete from favourite
                 </button>

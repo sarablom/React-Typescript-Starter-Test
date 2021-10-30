@@ -1,16 +1,12 @@
 import React, { useContext } from "react";
 import { Context } from "../../context/Context";
-import ListRender from "../../components/ListRender";
+import ListRender from "../../components/listrender/ListRender";
 import styles from "./DishScreen.module.css";
 
 function DishScreen() {
   const [context, updateContext] = useContext(Context);
   const items = context.dishes;
   const type = "dishes";
-
-  // async function removeItemHandler(item) {
-  //   await deleteDish(item.id);
-  // }
 
   return (
     <main className={styles.dishContainer}>
