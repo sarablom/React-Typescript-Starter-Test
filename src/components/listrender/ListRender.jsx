@@ -26,11 +26,11 @@ function ListRender(props) {
 
   async function removeItemHandler(type, item, index) {
     await deleteItem(type, item.id);
-    const newArray = [...items];
-    newArray.splice(index, 1);
+    const updatedItems = [...items];
+    updatedItems.splice(index, 1);
 
     updateContext({
-      items: newArray,
+      items: updatedItems,
     });
   }
 
